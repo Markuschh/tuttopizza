@@ -1,0 +1,99 @@
+/* Tutto Pizza – Dark Brand Theme (Orange/Schwarz) */
+:root{
+  --bg: #0b0c10;
+  --surface: #121318;
+  --muted: #a3aab6;
+  --text: #eef2f7;
+  --accent: #ff8c3a;
+  --accent2: #ffcc73;
+  --ring: rgba(255,140,58,.35);
+  --radius: 14px;
+  --border: rgba(255,255,255,.08);
+  --danger: #ff5964;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: radial-gradient(1200px 800px at 15% -10%, #181b22, var(--bg)); color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; }
+img { max-width: 100%; display:block; border-radius: 12px; }
+
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.row { display:flex; gap: 1rem; align-items:center; }
+.between { justify-content: space-between; }
+.wrap { flex-wrap: wrap; }
+
+.header{ position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px);
+  background: rgba(8,9,12,.65); border-bottom:1px solid var(--border); }
+.header .container { padding: .7rem 0; }
+.brand { display:flex; align-items:center; gap:.7rem; color: var(--text); text-decoration:none; font-weight:800; }
+.brand-mark{ width:42px; height:42px; object-fit:cover; border-radius: 8px; }
+.brand-name strong{ color: var(--accent); }
+.nav a{ color: var(--text); opacity:.9; text-decoration:none; margin-left: 1rem; }
+.nav a:hover{ opacity:1; }
+.nav .active{ text-decoration:underline; text-underline-offset: .3rem; }
+
+.hero{ padding: clamp(2.5rem, 5vw, 5rem) 0; }
+.grid-2{ display:grid; grid-template-columns: 1.1fr .9fr; gap:1.2rem; }
+.cta-row{ display:flex; gap:.75rem; flex-wrap:wrap; }
+.facts{ list-style:none; padding:0; margin: 1rem 0 0; }
+.facts li{ color: var(--muted); }
+.media-card{ background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)); border:1px solid var(--border);
+  border-radius: var(--radius); padding:.6rem; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+
+.section{ padding: clamp(2rem, 5vw, 3.5rem) 0; }
+.cards{ grid-template-columns: repeat(3, 1fr); }
+.card{ background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)); border:1px solid var(--border);
+  border-radius: var(--radius); padding: 1rem; display:flex; flex-direction:column; gap:.3rem; }
+.card .price-row{ display:flex; align-items:center; justify-content:space-between; margin-top:.4rem; }
+
+.gallery-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+
+.footer{ padding: 1rem 0; border-top:1px solid var(--border); color: var(--muted); }
+
+.btn{ display:inline-block; padding:.8rem 1.05rem; border-radius:12px; border:1px solid var(--border);
+  background:#15171d; color:var(--text); font-weight:600; text-decoration:none; cursor:pointer; transition:.2s transform ease; }
+.btn:hover{ transform: translateY(-1px); }
+.btn.primary{ background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #0a0a0a; border:none; }
+.btn.ghost{ background: transparent; }
+.btn.small{ padding:.5rem .8rem; font-size:.95rem; }
+.btn.full{ width:100%; }
+.btn.ring{ box-shadow: 0 0 0 3px var(--ring); }
+.btn.danger{ background:#23050a; border-color:#3c0b14; color:#ff9aa3; }
+
+.muted{ color: var(--muted); }
+.center{ text-align:center; }
+.mt{ margin-top: .8rem; }
+.tiny{ font-size: .85rem; }
+
+.menu-grid{ grid-template-columns: 1.3fr .7fr; gap: 1rem; }
+.list .row{ justify-content:space-between; align-items:flex-start; }
+.item{ padding:.7rem .5rem; border-bottom:1px dashed var(--border); }
+.item h4{ margin:0; }
+.item p{ margin:.15rem 0 0; color:var(--muted); }
+.price{ font-weight: 800; }
+
+.cart{ position: sticky; top: 84px; align-self:start; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border:1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+.cart-sum{ border-top:1px solid var(--border); margin-top:.6rem; padding-top:.6rem; display:grid; gap:.2rem; }
+.cart-sum .total{ border-top:1px dashed var(--border); padding-top:.3rem; }
+.cart-line{ display:flex; justify-content:space-between; align-items:center; gap:.4rem; margin:.35rem 0; }
+.cart-line small{ color: var(--muted); }
+.qty{ display:flex; gap:.3rem; align-items:center; }
+.qty button{ padding:.3rem .5rem; }
+
+.order-card{ background:#121318; border:1px solid var(--border); border-radius:12px; padding: .8rem; margin:.6rem 0; }
+
+fieldset{ border:1px solid var(--border); border-radius:12px; padding:.6rem .8rem; margin:.5rem 0; }
+legend{ padding:0 .3rem; color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 900px){
+  .grid-2{ grid-template-columns: 1fr; }
+  .cards{ grid-template-columns: 1fr 1fr; }
+  .gallery-grid{ grid-template-columns: 1fr 1fr; }
+  .menu-grid{ grid-template-columns: 1fr; }
+  .cart{ position: static; }
+}
+@media (max-width: 560px){
+  .cards, .gallery-grid{ grid-template-columns: 1fr; }
+}
