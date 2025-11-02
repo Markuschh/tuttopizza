@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tutto Pizza – Düsseldorf</title>
+  <meta name="description" content="Täglich frischer Teig, Tomatensauce und 100% Gouda. Liefer- & Abholservice." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container row between">
+      <a class="brand" href="./">
+        <img class="brand-mark" src="assets/logo-round.png" alt="Tutto Pizza Logo"/>
+        <span class="brand-name">Tutto <strong>Pizza</strong></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü umschalten">☰</button>
+      <nav id="primary-nav" class="nav" aria-label="Hauptnavigation">
+        <a href="./speisekarte.html">Speisekarte</a>
+        <a href="tel:02115047985" class="btn small ring">Jetzt anrufen</a>
+      </nav>
+    </div>
+  </header>
+
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  
+
+  <main id="main">
+    <section class="hero">
+      <div class="container grid-2">
+        <div>
+          <h1>Heiß. Knusprig. <span class="accent">Tutto Pizza.</span></h1>
+          <p>Täglich frischer Teig und Zutaten in Premium-Qualität. Bestelle zur <strong>Lieferung</strong> oder zur <strong>Abholung</strong>.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="./speisekarte.html">Online bestellen</a>
+            <a class="btn ghost" href="tel:02115047985">Telefonische Bestellung</a>
+          </div>
+          <ul class="facts">
+            <li>📍 Burgunderstraße 6, 40545 Düsseldorf</li>
+            <li>👤 Inhaber: Emre Havaoglu</li>
+            <li>☎️ <a href="tel:02115047985">0211 5047985</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Beliebte Klassiker</h2>
+        <div class="grid cards" id="popular-list"></div>
+        <div class="center mt">
+          <a class="btn" href="./speisekarte.html">Zur gesamten Speisekarte →</a>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="footer">
+    <div class="container row between wrap">
+      <p>© <span id="year"></span> Tutto Pizza – Burgunderstraße 6, Düsseldorf</p>
+      <p><a href="./kasse.html">Kasse (Personal)</a> • <a href="#">Impressum</a> • <a href="#">Datenschutz</a></p>
+    </div>
+  </footer>
+  <script src="site.js"></script>
+  <script>
+    // Beliebte Produkte laden
+    fetch('menu.json').then(r=>r.json()).then(menu=>{
+      const popular = [menu.pizzen[0], menu.pizzen[1], menu.pizzen[3], menu.pasta[0], menu.salate[0]];
+      const root = document.getElementById('popular-list');
+      popular.forEach((p, i)=>{
+        const el = document.createElement('article');
+        el.className='card';
+        el.innerHTML = `<div class="card-body"><h3>${p.name}</h3><p>${p.desc||''}</p><div class="price-row"><span class="price">${p.price.toFixed(2).replace('.',',')} €</span><button data-name="${p.name}" data-price="${p.price}" class="btn small add">In den Warenkorb</button></div></div>`;
+        root.appendChild(el);
+      });
+      root.addEventListener('click', (e)=>{
+        const btn = e.target.closest('.add');
+        if (!btn) return;
+        const item = {name: btn.dataset.name, price: parseFloat(btn.dataset.price), qty:1};
+        window.Cart.add(item);
+      });
+    });
+  </script>
+</body>
+</html>

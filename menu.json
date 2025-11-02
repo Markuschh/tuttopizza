@@ -1,0 +1,225 @@
+{
+  "pizzen": [
+    {
+      "name": "Margherita",
+      "price": 7.5,
+      "desc": "Tomatensauce und Gouda-Käse"
+    },
+    {
+      "name": "Salami",
+      "price": 9.0,
+      "desc": "mit Rindersalami"
+    },
+    {
+      "name": "Funghi",
+      "price": 9.0,
+      "desc": "mit frischen Champignons"
+    },
+    {
+      "name": "Tonno",
+      "price": 9.5,
+      "desc": "mit Thunfisch"
+    },
+    {
+      "name": "Schinken",
+      "price": 9.0,
+      "desc": "mit Truthahnschinken"
+    },
+    {
+      "name": "Inferno",
+      "price": 10.5,
+      "desc": "Rindersalami und milde Peperoni"
+    },
+    {
+      "name": "Hawaii",
+      "price": 10.5,
+      "desc": "Truthahnschinken und Ananas"
+    },
+    {
+      "name": "Italia",
+      "price": 12.0,
+      "desc": "Blattspinat, Paprika und Zwiebeln"
+    },
+    {
+      "name": "Fantasia",
+      "price": 13.0,
+      "desc": "Truthahnschinken, Spinat, Champignons"
+    },
+    {
+      "name": "Chicken",
+      "price": 13.0,
+      "desc": "Hähnchenbrust und frische Champignons"
+    },
+    {
+      "name": "Frutti Di Mare",
+      "price": 14.5,
+      "desc": "mit Meeresfrüchten"
+    },
+    {
+      "name": "Sizilia",
+      "price": 10.5,
+      "desc": "frische Tomaten und Mozzarella"
+    },
+    {
+      "name": "Vegetaria",
+      "price": 12.5,
+      "desc": "Paprika, Zwiebel, Champignons, Spinat"
+    },
+    {
+      "name": "Provincia",
+      "price": 12.5,
+      "desc": "Hirtenkäse, Tomaten, Oliven, Peperoni"
+    },
+    {
+      "name": "Romana",
+      "price": 13.0,
+      "desc": "Rindersalami, Champignons, Oliven"
+    },
+    {
+      "name": "Memo'",
+      "price": 12.5,
+      "desc": "Thunfisch, Champignons, Spinat"
+    },
+    {
+      "name": "Oriental",
+      "price": 11.5,
+      "desc": "türk. Knoblauchwurst"
+    },
+    {
+      "name": "Sole Mio",
+      "price": 12.5,
+      "desc": "Champignons, Peperoni, Paprika"
+    },
+    {
+      "name": "New York",
+      "price": 13.0,
+      "desc": "mit Shrimps, Champignons, Truthahnschinken"
+    },
+    {
+      "name": "Tutto",
+      "price": 12.5,
+      "desc": "Thunfisch, Champignons, Hirtenkäse, Peperoni"
+    }
+  ],
+  "pasta": [
+    {
+      "name": "Spaghetti Napoli",
+      "price": 9.0,
+      "desc": "mit Tomatensauce"
+    },
+    {
+      "name": "Spaghetti Scampi",
+      "price": 12.0,
+      "desc": "mit Shrimps in Tomatensauce"
+    },
+    {
+      "name": "Spaghetti Carbonara",
+      "price": 10.5,
+      "desc": "Truthahnschinken, Eigelb in Sahnesauce"
+    },
+    {
+      "name": "Spaghetti Tutto",
+      "price": 11.5,
+      "desc": "Champignons, Zwiebeln, Spinat, Paprika in Tomaten-Sahnesauce"
+    },
+    {
+      "name": "Rigatoni Mama",
+      "price": 12.5,
+      "desc": "Hühnerbrust, Champignons, Erbsen in Curry-Sahnesauce"
+    },
+    {
+      "name": "Rigatoni Tonno",
+      "price": 11.5,
+      "desc": "Thunfisch, Käse überbacken in Sahnesauce"
+    },
+    {
+      "name": "Tortellini Panna",
+      "price": 10.5,
+      "desc": "(optional Spinatfüllung) mit Truthahnschinken in Sahnesauce"
+    },
+    {
+      "name": "Tagliatelle Lachs",
+      "price": 12.5,
+      "desc": "mit Lachs und Zwiebel in Tomaten-Sahnesauce"
+    },
+    {
+      "name": "Tortellini Billy",
+      "price": 10.5,
+      "desc": "mit Erbsen, Mais und Parmesan in Sahnesauce"
+    }
+  ],
+  "salate": [
+    {
+      "name": "Basis-Salat",
+      "price": 6.5,
+      "desc": "Eisberg, Tomaten, Zwiebeln, Gurken"
+    },
+    {
+      "name": "Verde",
+      "price": 8.0,
+      "desc": "Basis-Salat mit Mais"
+    },
+    {
+      "name": "Nizza",
+      "price": 9.5,
+      "desc": "Basis-Salat, Mais und Hirtenkäse"
+    },
+    {
+      "name": "Summer",
+      "price": 10.0,
+      "desc": "Basis-Salat mit Hirtenkäse und Peperoni"
+    },
+    {
+      "name": "Mista",
+      "price": 8.5,
+      "desc": "Basis-Salat mit Paprika und Zwiebeln"
+    },
+    {
+      "name": "Hawaii",
+      "price": 10.5,
+      "desc": "Basis-Salat mit Truthahnschinken, Ananas und Gouda"
+    },
+    {
+      "name": "Capricciosa",
+      "price": 10.5,
+      "desc": "Thunfisch, Truthahnschinken, Oliven, Gouda"
+    }
+  ],
+  "panini": [
+    {
+      "name": "Panini - 6x Pizzabrötchen",
+      "price": 2.5,
+      "desc": "Ofenfrische Pizzabrötchen"
+    },
+    {
+      "name": "Gefüllte Pizzabrötchen Tonno (8 Stk)",
+      "price": 8.0,
+      "desc": "Gouda & Thunfisch"
+    },
+    {
+      "name": "Gefüllte Pizzabrötchen Salami (8 Stk)",
+      "price": 7.5,
+      "desc": "Gouda & Rindersalami"
+    },
+    {
+      "name": "Gefüllte Pizzabrötchen Schinken (8 Stk)",
+      "price": 7.5,
+      "desc": "Gouda & Truthahnschinken"
+    },
+    {
+      "name": "Gefüllte Pizzabrötchen Sucuk (8 Stk)",
+      "price": 7.5,
+      "desc": "Gouda & türk. Knoblauchwurst"
+    },
+    {
+      "name": "Gefüllte Pizzabrötchen Kreta (8 Stk)",
+      "price": 8.0,
+      "desc": "Gouda, Hirtenkäse & Blattspinat"
+    },
+    {
+      "name": "Gefüllte Pizzabrötchen Hawaii (8 Stk)",
+      "price": 8.5,
+      "desc": "Gouda, Truthahnschinken & Ananas"
+    }
+  ]
+}
